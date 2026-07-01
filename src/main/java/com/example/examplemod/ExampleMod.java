@@ -1,6 +1,8 @@
 package com.example.examplemod;
 
 import com.example.examplemod.item.ModItems;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,5 +47,11 @@ public class ExampleMod {
 
     // Add the example block item.json to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+    }
+
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+
     }
 }
