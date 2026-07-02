@@ -91,7 +91,7 @@ Example mod description.
 [[dependencies.${mod_id}]]
 modId="fashionframework"
 mandatory=true
-versionRange="[1.0.0-alpha,)"
+versionRange="[1.0,)"
 ordering="AFTER"
 side="BOTH"
 
