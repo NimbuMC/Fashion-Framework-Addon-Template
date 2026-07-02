@@ -8,6 +8,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.nimbu.fashionframework.tags.ModTags;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
@@ -21,33 +22,31 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-//        this.tag(ItemTags.HEAD_ARMOR)
-//                .add(ModItems.SUNGLASSES.get())
-//                .add(ModItems.LOW_SUNGLASSES.get())
-//                .add(ModItems.CAT_EARS.get());
-//
-//        this.tag(ItemTags.CHEST_ARMOR)
-//                .add(ModItems.HOODIE.get());
-//
-//        this.tag(ItemTags.LEG_ARMOR)
-//                .add(ModItems.SWEATPANTS.get());
-//
-//        this.tag(ItemTags.FOOT_ARMOR)
-//                .add(ModItems.SNEAKERS.get());
-//
+        this.tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.DANTDM_GOGGLES.get());
+
+        this.tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.DANTDM_JACKET.get());
+
+        this.tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.DANTDM_PANTS.get());
+
+        this.tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.DANTDM_SHOES.get());
+
+        //Only put clothes that use a second layer in here
 //        this.tag(ItemTags.DYEABLE)
 //                .add(ModItems.HOODIE.get())
 //                .add(ModItems.SWEATPANTS.get())
 //                .add(ModItems.SNEAKERS.get())
 //                .add(ModItems.CAT_EARS.get());
-//
-//        this.tag(ModTags.Items.CLOTHING)
-//                .add(ModItems.HOODIE.get())
-//                .add(ModItems.SWEATPANTS.get())
-//                .add(ModItems.SNEAKERS.get())
-//                .add(ModItems.SUNGLASSES.get())
-//                .add(ModItems.LOW_SUNGLASSES.get())
-//                .add(ModItems.CAT_EARS.get());
+
+        //Put all clothes in this tag
+        this.tag(ModTags.Items.CLOTHING)
+                .add(ModItems.DANTDM_GOGGLES.get())
+                .add(ModItems.DANTDM_JACKET.get())
+                .add(ModItems.DANTDM_PANTS.get())
+                .add(ModItems.DANTDM_SHOES.get());
 
 
     }
