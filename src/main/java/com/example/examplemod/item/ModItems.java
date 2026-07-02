@@ -8,6 +8,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.nimbu.fashionframework.item.ModArmorMaterials;
 import net.nimbu.fashionframework.item.custom.ClothingItem;
+import net.nimbu.fashionframework.item.custom.StyleSchematicItem;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
@@ -36,6 +39,15 @@ public class ModItems {
                     new Item.Properties()
                             .durability(ArmorItem.Type.BOOTS.getDurability(10)),
                     0xFFFFFFF));
+
+    //Style Schematic:
+    public static final DeferredItem<Item> DANTDM_STYLE_SCHEMATIC = ITEMS.register("dantdm_style_schematic",
+            () -> new StyleSchematicItem(new Item.Properties(),
+                    List.of(ModItems.DANTDM_GOGGLES.get(),
+                            ModItems.DANTDM_JACKET.get(),
+                            ModItems.DANTDM_PANTS.get(),
+                            ModItems.DANTDM_SHOES.get()
+                    )));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -38,9 +38,14 @@ public class ExampleMod {
 
     // Add all items here
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == ModCreativeModeTabs.FASHION_FRAMEWORK_TAB) {
-            event.accept(ModItems.DANTDM_GOGGLES.get());
-        }
+        //Doesnt work
+//        if(event.getTabKey() == ModCreativeModeTabs.FASHION_FRAMEWORK_TAB) {
+//            event.accept(ModItems.DANTDM_STYLE_SCHEMATIC.get());
+//            event.accept(ModItems.DANTDM_GOGGLES.get());
+//            event.accept(ModItems.DANTDM_JACKET.get());
+//            event.accept(ModItems.DANTDM_PANTS.get());
+//            event.accept(ModItems.DANTDM_SHOES.get());
+//        }
     }
 
     @SubscribeEvent
