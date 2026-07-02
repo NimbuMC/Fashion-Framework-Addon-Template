@@ -1,8 +1,11 @@
 package com.example.examplemod;
 
 import com.example.examplemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.nimbu.fashionframework.block.ModBlocks;
+import net.nimbu.fashionframework.item.ModCreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -32,10 +35,14 @@ public class ExampleMod {
 
     private void commonSetup(FMLCommonSetupEvent event) {
     }
-    // Add the example block item.json to the building blocks tab
+
+    // Add all items here
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == ModCreativeModeTabs.FASHION_FRAMEWORK_TAB) {
+            event.accept(ModItems.DANTDM_GOGGLES.get());
+        }
     }
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
     }
