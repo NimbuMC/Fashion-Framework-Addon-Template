@@ -9,12 +9,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.nimbu.fashionframework.item.ModArmorMaterials;
 import net.nimbu.fashionframework.item.custom.ClothingItem;
 
-import java.util.List;
-
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
 
-    //Example Clothing:
+    //Example Clothing (Credits to... DanTDM I guess lol):
     public static final DeferredItem<Item> DANTDM_GOGGLES = ITEMS.register("dantdm_goggles",
             () -> new ClothingItem(ModArmorMaterials.CLOTH_ARMOUR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties()

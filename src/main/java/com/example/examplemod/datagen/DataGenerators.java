@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 
 
-//Thanks kaupenjoe lol
+//Thanks Kaupenjoe for your amazing modding tutorials!
 
 @EventBusSubscriber(modid = ExampleMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
